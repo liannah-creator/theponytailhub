@@ -1,0 +1,441 @@
+/* =================================
+   COLLECTIONS SECTION
+================================= */
+
+.collections-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 120px 6% 100px;
+
+  background: #050505;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.collections-header {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 80px;
+}
+
+
+.collections-label {
+  margin-bottom: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 6px;
+
+  color: #f1afc5;
+}
+
+
+.collections-header h1 {
+  margin: 0 0 20px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 7vw, 90px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+.collections-header h1 span {
+  color: #f1afc5;
+
+  font-style: italic;
+}
+
+
+.collections-subtitle {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =================================
+   COLLECTION LIST
+================================= */
+
+.collections-list {
+  width: 100%;
+
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =================================
+   COLLECTION ITEM
+================================= */
+
+.collection-item {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 320px 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+  margin-bottom: 80px;
+}
+
+
+/* =================================
+   IMAGES
+================================= */
+
+.collection-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(241, 175, 197, 0.35);
+
+  background: #111;
+}
+
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+
+.collection-image:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =================================
+   IMAGE LABEL
+================================= */
+
+.image-label {
+  position: absolute;
+
+  bottom: 15px;
+  left: 15px;
+
+  padding: 7px 13px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(241, 175, 197, 0.3);
+
+  border-radius: 30px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  color: #f1afc5;
+}
+
+
+/* =================================
+   COLLECTION INFORMATION
+================================= */
+
+.collection-info {
+  text-align: center;
+
+  padding: 20px 5px;
+}
+
+
+.collection-number {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  color: rgba(241, 175, 197, 0.6);
+}
+
+
+.collection-info h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #f1afc5;
+}
+
+
+/* =================================
+   DIVIDER
+================================= */
+
+.collection-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 20px 0;
+}
+
+
+.collection-divider span:first-child,
+.collection-divider span:last-child {
+  width: 45px;
+
+  height: 1px;
+
+  background: rgba(241, 175, 197, 0.5);
+}
+
+
+.collection-divider span:nth-child(2) {
+  font-size: 10px;
+
+  color: #f1afc5;
+}
+
+
+.collection-info p {
+  margin: 0 auto 20px;
+
+  max-width: 280px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.collection-price {
+  margin-bottom: 25px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  color: #ffffff;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.collection-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 12px 20px;
+
+  border: 1px solid #f1afc5;
+
+  border-radius: 50px;
+
+  background: transparent;
+
+  color: #f1afc5;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+}
+
+
+.collection-button span {
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.collection-button:hover {
+  background: #f1afc5;
+
+  color: #111;
+
+  transform: translateY(-3px);
+}
+
+
+.collection-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+  .collection-item {
+    grid-template-columns: 1fr 240px 1fr;
+
+    gap: 20px;
+  }
+
+  .collection-info h2 {
+    font-size: 22px;
+  }
+
+  .collection-info p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .collections-section {
+    padding: 90px 20px;
+  }
+
+
+  .collections-header {
+    margin-bottom: 50px;
+  }
+
+
+  .collections-header h1 {
+    font-size: 55px;
+  }
+
+
+  .collection-item {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 65px;
+  }
+
+
+  /* Information goes across the entire row */
+
+  .collection-info {
+    grid-column: 1 / -1;
+
+    grid-row: 2;
+
+    padding: 20px 10px;
+  }
+
+
+  .collection-image {
+    aspect-ratio: 1 / 1.1;
+
+    border-radius: 15px;
+  }
+
+
+  .collection-info h2 {
+    font-size: 25px;
+  }
+
+
+  .collection-info p {
+    max-width: 320px;
+
+    font-size: 11px;
+  }
+
+
+  .image-label {
+    font-size: 7px;
+
+    bottom: 10px;
+    left: 10px;
+  }
+
+}

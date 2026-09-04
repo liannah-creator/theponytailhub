@@ -1,0 +1,126 @@
+/* Footer styles */
+.site-footer {
+  width: 100%;
+  background: #050505;
+  color: rgba(255,255,255,0.95);
+  padding: 28px 0; /* vertical padding, inner container will match page width */
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1126px; /* match page root width */
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 12px 6%;
+  background: transparent; /* remove glassmorphism */
+  border-radius: 0;
+  border: none;
+  backdrop-filter: none;
+}
+
+.footer-left {
+  min-width: 220px;
+}
+
+.footer-logo {
+  color: #f1afc5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav a {
+  color: #f1afc5;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  background: rgba(241,175,197,0.06);
+  color: #fff;
+}
+
+.footer-right {
+  text-align: right;
+  min-width: 220px;
+}
+
+.socials a {
+  color: rgba(241,175,197,0.95);
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.social-link svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.social-link:hover {
+  background: rgba(241,175,197,0.06);
+}
+
+.copyright {
+  margin-top: 8px;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  /* hide the desktop nav and show accordion on mobile */
+  .footer-nav { display: none; }
+  .footer-accordion { display: block; width: 100%; }
+  .footer-accordion summary { list-style: none; cursor: pointer; color: #f1afc5; font-weight: 700; }
+  .footer-accordion summary::-webkit-details-marker { display: none; }
+  .footer-accordion ul { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; }
+}
+
+/* hide accordion on larger screens */
+@media (min-width: 801px) {
+  .footer-accordion { display: none; }
+}
