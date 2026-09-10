@@ -48,10 +48,7 @@ const About = () => {
 
         </div>
 
-        <button className="about-button">
-          Discover Our Story
-          <span>→</span>
-        </button>
+        {/* Removed Discover Our Story button as requested */}
 
       </div>
     </section>

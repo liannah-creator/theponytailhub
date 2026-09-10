@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Collections.css";
+import GalleryModal from "./GalleryModal";
 
 import luxeFront from "../assets/luxe-front.jpg";
 import luxeBack from "../assets/luxe-back.jpg";
@@ -39,6 +40,21 @@ const collections = [
 
 
 const Collections = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState([]);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalPrice, setModalPrice] = useState("");
+  const [startIndex, setStartIndex] = useState(0);
+
+  const openModal = (item, imgIndex = 0) => {
+    setModalImages([item.front, item.back]);
+    setModalTitle(item.name);
+    setModalPrice(item.price);
+    setStartIndex(imgIndex);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
   return (
     <section className="collections-section" id="collections">
 
@@ -71,18 +87,18 @@ const Collections = () => {
 
             {/* FRONT IMAGE */}
 
-            <div className="collection-image">
+              <div className="collection-image" onClick={() => openModal(item, 0)} style={{cursor: 'pointer'}}>
 
-              <img
-                src={item.front}
-                alt={`${item.name} front view`}
-              />
+                <img
+                  src={item.front}
+                  alt={`${item.name} front view`}
+                />
 
-              <span className="image-label">
-                FRONT
-              </span>
+                <span className="image-label">
+                  FRONT
+                </span>
 
-            </div>
+              </div>
 
 
             {/* PRODUCT INFORMATION */}
@@ -111,7 +127,7 @@ const Collections = () => {
                 {item.price}
               </div>
 
-              <button className="collection-button">
+              <button className="collection-button" onClick={() => openModal(item, 0)}>
                 VIEW DETAILS
                 <span>→</span>
               </button>
@@ -121,7 +137,7 @@ const Collections = () => {
 
             {/* BACK IMAGE */}
 
-            <div className="collection-image">
+            <div className="collection-image" onClick={() => openModal(item, 1)} style={{cursor: 'pointer'}}>
 
               <img
                 src={item.back}
@@ -140,9 +156,17 @@ const Collections = () => {
 
       </div>
 
+      <GalleryModal
+        open={modalOpen}
+        images={modalImages}
+        startIndex={startIndex}
+        title={modalTitle}
+        price={modalPrice}
+        onClose={closeModal}
+      />
+
     </section>
   );
 };
-
 
 export default Collections;
